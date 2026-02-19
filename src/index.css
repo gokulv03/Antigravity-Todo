@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=Orbitron:wght@400;500;600;700;900&display=swap');
+
+/* 
+  PREMIUM THEME SYSTEM 
+  Default Theme: Nebula (Deep Blue & Neon Pink)
+*/
+:root {
+  /* Nebula Theme (Default) */
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-tertiary: #334155;
+
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #64748b;
+
+  --accent-primary: #d946ef;
+  --accent-secondary: #8b5cf6;
+  --accent-glow: rgba(217, 70, 239, 0.6);
+
+  --danger: #ef4444;
+  --success: #10b981;
+  --warning: #f59e0b;
+
+  /* UI Tokens */
+  --shadow-sm: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 8px 16px -2px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 24px 48px -12px rgba(0, 0, 0, 0.5);
+
+  /* Glassmorphism 2.0 */
+  --glass-bg: rgba(15, 23, 42, 0.65);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.12);
+  --glass-shine: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+
+  --font-family: 'Inter', sans-serif;
+  --font-display: 'Outfit', sans-serif;
+
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-full: 9999px;
+
+  --transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Sunset Theme (Deep Indigo + Fiery Orange) */
+.theme-sunset {
+  --bg-primary: #1e1b4b;
+  /* Indigo 950 */
+  --bg-secondary: #312e81;
+  /* Indigo 900 */
+  --bg-tertiary: #4338ca;
+  /* Indigo 800 */
+
+  --text-primary: #fff1f2;
+  /* Rose 50 */
+  --text-secondary: #e0e7ff;
+  /* Indigo 100 */
+  --text-muted: #818cf8;
+  /* Indigo 400 */
+
+  --accent-primary: #f97316;
+  /* Orange 500 */
+  --accent-secondary: #db2777;
+  /* Pink 600 */
+  --accent-glow: rgba(249, 115, 22, 0.5);
+}
+
+/* Ocean Theme (Dark Abyss + Electric Cyan) */
+.theme-ocean {
+  --bg-primary: #020617;
+  /* Slate 950 (darker) */
+  --bg-secondary: #0f172a;
+  /* Slate 900 */
+  --bg-tertiary: #1e293b;
+  /* Slate 800 */
+
+  --text-primary: #f0f9ff;
+  /* Sky 50 */
+  --text-secondary: #bae6fd;
+  /* Sky 200 */
+  --text-muted: #38bdf8;
+  /* Sky 400 */
+
+  --accent-primary: #06b6d4;
+  /* Cyan 500 */
+  --accent-secondary: #3b82f6;
+  /* Blue 500 */
+  --accent-glow: rgba(6, 182, 212, 0.5);
+}
+
+/* OLED Theme (Pure Black + White) */
+.theme-oled {
+  --bg-primary: #000000;
+  --bg-secondary: #121212;
+  --bg-tertiary: #262626;
+
+  --text-primary: #ffffff;
+  --text-secondary: #a3a3a3;
+  --text-muted: #525252;
+
+  --accent-primary: #ffffff;
+  --accent-secondary: #d4d4d4;
+  --accent-glow: rgba(255, 255, 255, 0.3);
+
+  --glass-bg: rgba(0, 0, 0, 0.8);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Light Theme (Crisp White & Blue) */
+.theme-light {
+  --bg-primary: #f8fafc;
+  /* Slate 50 */
+  --bg-secondary: #ffffff;
+  /* White */
+  --bg-tertiary: #e2e8f0;
+  /* Slate 200 */
+
+  --text-primary: #0f172a;
+  /* Slate 900 */
+  --text-secondary: #334155;
+  /* Slate 700 */
+  --text-muted: #64748b;
+  /* Slate 500 */
+
+  --accent-primary: #2563eb;
+  /* Blue 600 */
+  --accent-secondary: #7c3aed;
+  /* Violet 600 */
+  --accent-glow: rgba(37, 99, 235, 0.3);
+
+  --glass-bg: rgba(255, 255, 255, 0.8);
+  --glass-border: 1px solid rgba(0, 0, 0, 0.05);
+  --glass-bg: rgba(255, 255, 255, 0.8);
+  --glass-border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Lux Theme (Black & Gold) */
+.theme-lux {
+  --bg-primary: #000000;
+  --bg-secondary: #0F0F0F;
+  --bg-tertiary: #1A1A1A;
+
+  --text-primary: #F5F5F5;
+  --text-secondary: #E5E5E5;
+  --text-muted: #A3A3A3;
+
+  --accent-primary: #FFD700;
+  /* Gold */
+  --accent-secondary: #C0C0C0;
+  /* Silver */
+  --accent-glow: rgba(255, 215, 0, 0.4);
+
+  --glass-bg: rgba(10, 10, 10, 0.85);
+  --glass-border: 1px solid rgba(255, 215, 0, 0.2);
+  --glass-shine: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+/* Royal Theme (Deep Plum & Gold) */
+.theme-royal {
+  --bg-primary: #1a0b1c;
+  /* Deep Plum */
+  --bg-secondary: #2d1b2e;
+  --bg-tertiary: #4a2c4d;
+
+  --text-primary: #fdf4ff;
+  --text-secondary: #e8d5e8;
+  --text-muted: #debbde;
+
+  --accent-primary: #fbbf24;
+  /* Amber Gold */
+  --accent-secondary: #d946ef;
+  /* Magenta */
+  --accent-glow: rgba(251, 191, 36, 0.4);
+
+  --glass-bg: rgba(26, 11, 28, 0.75);
+  --glass-border: 1px solid rgba(251, 191, 36, 0.15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+  transition: var(--transition);
+}
+
+input,
+textarea {
+  border: none;
+  outline: none;
+  font-family: inherit;
+  background: transparent;
+  color: inherit;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}

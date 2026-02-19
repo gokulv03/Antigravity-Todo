@@ -1,0 +1,193 @@
+.pomodoro-widget {
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-lg);
+    padding: 1rem;
+    margin: 1rem 0.5rem;
+    /* Add margin to separate from nav */
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    /* This might be invisible in light mode, but border radius helps */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.pomodoro-widget:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--current-color);
+}
+
+.timer-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.mode-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--current-color);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.mode-switch-btn {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.mode-switch-btn:hover {
+    color: var(--text-primary);
+}
+
+.timer-display-container {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.75rem;
+}
+
+.timer-ring {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+.ring-bg {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.1);
+    stroke-width: 6;
+}
+
+.ring-progress {
+    fill: none;
+    stroke: var(--current-color);
+    stroke-width: 6;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 1s linear, stroke 0.3s ease;
+}
+
+.time-value {
+    font-family: 'Outfit', monospace;
+    /* Use premium font but monospace helps? Or just stick to Outfit */
+    font-variant-numeric: tabular-nums;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    z-index: 10;
+}
+
+.timer-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.control-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.control-btn.main {
+    width: 40px;
+    height: 40px;
+    background: var(--current-color);
+    color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.control-btn.main:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.control-btn.reset:hover {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+/* Settings Overlay */
+.settings-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    z-index: 20;
+    animation: fadeIn 0.2s ease;
+}
+
+.settings-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.settings-group label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.settings-group input {
+    background: var(--bg-tertiary);
+    border: 1px solid transparent;
+    border-radius: var(--radius-md);
+    padding: 0.5rem;
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.settings-group input:focus {
+    border-color: var(--accent-primary);
+}
+
+.save-btn {
+    margin-top: auto;
+    background: var(--accent-primary);
+    color: white;
+    padding: 0.5rem;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.save-btn:hover {
+    filter: brightness(1.1);
+}
+
+.settings-toggle {
+    background: transparent;
+    color: var(--text-muted);
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.settings-toggle:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+}

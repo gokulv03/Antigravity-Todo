@@ -1,0 +1,132 @@
+/* Subtasks Styling - Append to TaskItem.css */
+
+.task-card-wrapper {
+    background: var(--bg-secondary);
+    border: 1px solid var(--bg-tertiary);
+    border-radius: var(--radius-lg);
+    margin-bottom: 0.75rem;
+    transition: var(--transition);
+    overflow: hidden;
+}
+
+.task-card-wrapper:hover {
+    border-color: var(--accent-primary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Override task-item default styling to fit inside wrapper */
+.task-card-wrapper .task-item {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 0;
+    padding: 1rem 1.25rem;
+    cursor: pointer;
+}
+
+.subtask-badge {
+    background: var(--bg-primary);
+    color: var(--text-muted);
+    padding: 2px 8px;
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    margin-left: auto;
+    /* Push to right if flex allows, or just margin */
+}
+
+/* Subtasks Section */
+.subtasks-section {
+    background: rgba(0, 0, 0, 0.2);
+    border-top: 1px solid var(--bg-tertiary);
+    padding: 1rem 1.5rem;
+}
+
+.subtasks-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.subtask-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    transition: var(--transition);
+}
+
+.subtask-left {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+    flex: 1;
+}
+
+.subtask-check {
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--text-muted);
+    border-radius: 4px;
+    transition: var(--transition);
+}
+
+.subtask-left:hover .subtask-check {
+    border-color: var(--accent-secondary);
+}
+
+.subtask-check.checked {
+    background: var(--accent-secondary);
+    border-color: var(--accent-secondary);
+}
+
+.subtask-item.completed .subtask-text {
+    text-decoration: line-through;
+    color: var(--text-muted);
+}
+
+.subtask-delete {
+    opacity: 0;
+    color: var(--danger);
+    transition: var(--transition);
+    padding: 4px;
+}
+
+.subtask-item:hover .subtask-delete {
+    opacity: 1;
+}
+
+/* Add Subtask Form */
+.add-subtask-form {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.add-subtask-form input {
+    background: transparent;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    color: var(--text-primary);
+    width: 100%;
+    border-bottom: 1px solid transparent;
+    transition: var(--transition);
+}
+
+.add-subtask-form input:focus {
+    border-bottom-color: var(--accent-primary);
+}
+
+.add-subtask-form button {
+    color: var(--text-muted);
+    font-size: 1.2rem;
+    padding: 0 0.5rem;
+    transition: var(--transition);
+}
+
+.add-subtask-form button:hover {
+    color: var(--accent-primary);
+}
